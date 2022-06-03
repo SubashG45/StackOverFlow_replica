@@ -1,25 +1,24 @@
 <template>
-    <div class="bg-light py-2">
+    <div class="bg-light" id="navbar">
       
-        <div class="row px-4">
+        <div class="row mx-auto">
           <div class="col-md-3">
-            <div class="d-flex text-center">
-              <img src="../img/logo.png" alt="" style="height: 50px; width: 150px">
-              <a href="" class="pt-2 px-4 fs-7">Product</a>
+            <div class="d-flex text-center px-4" >
+              <div class="d-flex logo px-2 text-center pt-2">
+                <img src="../img/logo.png" alt="Logo" style="height: 30px;">
+                <p style="padding: 5px 0px 0px 5px;">Stack</p>
+                <span style="padding: 5px 5px 0px 0px;"><strong>OverFlow</strong></span>
+              </div>
+              <a href="" class="text-center">Product</a>
             </div>
           </div>
-            <div class="col-md-6">
-              <!-- <p>this is search</p> -->
-              <form class="header_search d-flex item-center ">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search mt-2 mx-2"
-                    viewBox="0 0 16 16">
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-                  <input type="search" placeholder="Search.." style="width: 100%;">
+          <div class="col-md-6 py-2">
+              <form class="header_search d-flex item-center">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input type="search" placeholder="Search..">
               </form>
-            </div>
-            <div class="col-md-3 d-flex">
+          </div>
+          <div class="col-md-3 d-flex">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
                 <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
               </svg>
@@ -51,20 +50,55 @@ export default {
 }
 </script>
 <style>
+*{
+  margin: 0;
+  padding: 0;
+}
+#navbar{
+  border-top: 3px solid #f59547;
+}
   a{
     text-decoration: none;
-    color: black;
+    color: #6f757b;
+    padding-top: 15px;
+    padding-left: 10px;
+    font-size: 13px;
   }
-  input{
-    border: none;
+  .logo{
+    transition: 0.5s ease-out;
+  }
+  .logo:hover{
+    background: lightgrey;
+    transition: 0.5s ease-out;
+
   }
   .header_search{
-    width: 100%;
-    height: 70%;
     background: white;
+    height: 100%;
+    width: 100%;
+    border: 0.5px solid #6f757b;
+    border-radius: 3px;
   }
+  .header_search:focus{
+    border: 1px solid blue;
+  }
+  .header_search input{
+    border: none;
+    height: 100%;
+    width: 100%;
+  }
+  .header_search input:focus{
+    outline: none;
+  }
+  .header_search svg{
+    padding-left: -10px;
+  }
+  
   svg{
     margin-left: 40px;
     margin-top: 10px;
+  }
+  img{
+    height: 20px;
   }
 </style>
