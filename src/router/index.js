@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import NavBar from '../views/NavBar.vue'
-import Next from '../views/Next.vue'
+import Main from '../views/Main.vue'
 
 const routes = [
   {
@@ -8,7 +8,7 @@ const routes = [
     name: 'NavBar',
     component: NavBar,
     children: [
-      {name: "Next", path: "/a", component: Next}
+      {name: "Main", path: "/", component: Main}
     ]
   },
   // {
